@@ -1,3 +1,5 @@
+"""Backend Class to Handle Interface of Judges, Juror and LLMs"""
+
 from ollama import AsyncClient
 from lang_detect.lang_detection_lib.lang_classify import TextClassify
 from templates import (
@@ -61,7 +63,7 @@ class LangEvalAlgo:
 
         Args:
             example (str): example to be evaluate
-            juror_assessments (list): list containing the language of examplea and evaluations from jurors from previous step.
+            juror_assessments (list): language of example and evaluations from jurors
 
         Returns:
             str: returns the final assessment from the juror.
